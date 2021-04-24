@@ -1,0 +1,42 @@
+-- creer une base de donnees 
+create database di2
+
+-- LDD : langage de definition des donnees => create , alter et drop (DE SQL)
+CREATE TABLE clients (
+id INT PRIMARY KEY auto_increment,
+nom VARCHAR(50),
+prenom VARCHAR(50),
+tel VARCHAR(20) ,
+adresse TEXT
+
+)
+
+les 5 contraintes de bd :
+primary key : cle primaire  (not null + unique )
+foreign key : cle etrangere  permet de mettre en relation une ou plusieurs tables 
+not null: champs obligatoire
+unique  : champs n'acceptant que des valeurs unique (peut etre null)
+check : contrainte de domaine (  )
+
+
+
+CREATE TABLE commande (
+id INT PRIMARY KEY AUTO_INCREMENT  ,
+client_id INT   ,
+date_cmd DATE  ,
+notes TEXT,
+email VARCHAR(100) UNIQUE,
+CONSTRAINT fk1 FOREIGN KEY(client_id) REFERENCES clients(id)
+)
+-- inserer des enregistrements (records) dans la table client
+INSERT INTO clients(nom,prenom,tel,adresse)
+
+VALUES('khadraoui','ayoub','0524242424','Rabat , hay riyad  num 55')
+ modification de l'adresse du client ayant id=2
+ UPDATE clients SET
+ adresse = 'Casablanca,hay mohamedi num 45'
+ WHERE id= 2
+
+ modifier le nom ,prenom du clients ayant le nom =test
+-- modifier la structure de la table client => ajouter une contrainte unicite sur le tel
+ ALTER TABLE clients ADD CONSTRAINT uc1 UNIQUE(tel) 

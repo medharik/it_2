@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 2fr  8fr   ;
+            grid-template-rows:50px 100px 600px  100px;
+            height: 100vh; 
+            position: relative;
+
+
+
+        }
+        .container div:nth-child(2n){
+            background: rgb(246, 162, 162);
+            border: 1px solid black;
+        }
+        .container div:nth-child(2n+1){
+            border: 1px solid black;
+            background: rgb(161, 236, 132);
+        }
+        .header{
+            grid-column: 1/4;
+            grid-row: 2/3;
+        }
+        .footer{
+
+            grid-column: 1/4;
+            grid-row: 4/5;
+        }
+        .nav{
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+        .logo img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .content{
+display: grid;
+grid-template-columns: repeat(auto-fill,50%);
+grid-template-rows: 33% 33% 34%;
+        }
+        .nav{
+            display: grid;
+            grid-template-columns: 1fr 20fr;
+            grid-template-areas: "logo"  "menu";
+        
+        }
+        .nav nav {
+            background: red;
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit,100px); */
+            grid-area: "menu";
+            
+        }
+        li{
+            list-style: none;
+            border: 1px solid black;
+        }
+        .nav #logo{
+            grid-area: "logo";
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item nav"><div id="logo">
+            <img src="https://placehold.it/300x300" alt="">
+        </div>
+        <nav>
+            <li><a href="">test 001</a></li>
+            <li><a href="">test 002</a></li>
+            <li><a href="">test 003</a></li>
+            <li><a href="">test 004</a></li>
+            <li><a href="">test 004</a></li>
+            <li><a href="">test 004</a></li>
+        </nav>
+    
+    </div>
+        <div class="item header" style="position: sticky;top:10px">
+        
+        </div>
+        <div class="item aside" style="position: sticky;top:10px">2</div>
+        <div class="item content">
+<div>01</div>
+<div>02</div>
+<div>03</div>
+<div>04</div>
+<div>05</div>
+<div>06</div>
+
+        </div>
+        <div class="item footer">4</div>
+       
+    </div>
+</body>
+</html>

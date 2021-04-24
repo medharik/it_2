@@ -1,0 +1,22 @@
+Une base de donnees :
+permet de stocker (assure la persitance des donnees ) d'une maniere structuree 
+(sous forme de tables relationnelles ou de documents (NOSQL))
+ 
+physiquement :
+une base de donnees est un fichier stocke au niveau du disque dur
+ce fichier est GERE par un SGBDR
+SGBDR : un systeme (logiciel) de gestion des base de donnees relationnelles
+exemple de SGBDR : 
+SERVER : 
+Oracle 
+SQL SERVER
+MYSQL SERVER (open source )
+POSTGRESQL
+CLIENT :
+ACCESS
+
+logiquement :
+une base de donnees relationnelles se compose de plusieurs tables relationnelles
+
+le SQL : Structured Query Language 
+est un langage declaratif permet d'interoger une base de donnees

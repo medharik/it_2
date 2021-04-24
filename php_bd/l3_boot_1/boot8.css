@@ -1,0 +1,31 @@
+#intro {
+  width: 100%;
+  height: 100vh;
+  background: url("images/slider-1.jpg") no-repeat fixed center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255 255 255);
+}
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: rgb(226, 220, 220);
+  border-bottom: 4px solid orangered;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255 255 255);
+  text-shadow: 0 0 3px black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.navbar-brand img {
+  height: 50px;
+}
+.zone-intro p {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.zone-intro {
+  text-shadow: 0 0 3px black;
+}
